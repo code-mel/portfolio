@@ -97,6 +97,9 @@ renderPROJECTS();
 /***** click event for modal ****/
 $(function() {
     //Click event for class changes for Modal to show and hid
+    $('#lightSlider li h5').on('click', function () {
+        console.log('view project has been clicked');
+    };
     $('#lightSlider li h5, .closebtn').on('click', function () {
         console.log('view project has been presed');
         //check which element is being clicked on
