@@ -69,6 +69,9 @@ ajaxhttp.onreadystatechange = function () {
                 }
             ]
         });
+        $('.view-button').on('click', function () {
+            console.log('view project has been clicked');
+        });
 
     }
 };
