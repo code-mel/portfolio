@@ -1,0 +1,54 @@
+[
+  {
+  "id": 1,
+  "title": "Project one",
+  "description": "This is a example of what I will be talking about my project blah bha jdflsjdf kdjf sjf ldj lajf ldjs ",
+  "thumbnail" : "/project-1-thumbnail.jpg",
+    "skills" : ["html", "css3", "Jquery", "wordpress", "php"],
+    "images":{
+      "group": "/holder-responsive.png",
+      "desktop": null,
+      "table": null,
+      "mobile":null
+    }
+  },
+  {
+    "id": 2,
+    "title": "Project Two",
+    "description": "This is a example of what I will be talking about my project this is two djflsjd. djfjs  jdfljs kjd fjdj jkf jsdlfj",
+    "thumbnail" : "/project-1-thumbnail.jpg",
+    "skills" : ["html", "css3", "Jquery", "wordpress", "php"],
+    "images":{
+      "group": "/holder-responsive.png",
+      "desktop": null,
+      "table": null,
+      "mobile":null
+    }
+  },
+  {
+    "id": 3,
+    "title": "Project Three",
+    "description": "This is a example of what I will be talking about my project this is three fksjfldkj sjklsjklfj sjdkljfklsd",
+    "thumbnail" : "/project-1-thumbnail.jpg",
+    "skills" : ["html", "css3", "Jquery", "wordpress", "php"],
+    "images":{
+      "group": "/holder-responsive.png",
+      "desktop": null,
+      "table": null,
+      "mobile":null
+    }
+  },
+  {
+    "id": 4,
+    "title": "Project Four",
+    "description": "This is a example of what I will be talking about my project this is four dskjfdlkjf sdjfljs jdlfj djfljjslj",
+    "thumbnail" : "/project-1-thumbnail.jpg",
+    "skills" : ["html", "css3", "Jquery", "wordpress", "php"],
+    "images":{
+      "group": "/holder-responsive.png",
+      "desktop": null,
+      "table": null,
+      "mobile":null
+    }
+  }
+]
