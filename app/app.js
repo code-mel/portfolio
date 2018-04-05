@@ -84,7 +84,7 @@ function renderPROJECTS(data) {
         htmlString += '<li style="background-image: url(\'images' + singleProject.thumbnail + '\')"project-data=\"'+ singleProject.id +'\">';
         htmlString += '<div class="project-titles">';
         htmlString += '<h3>'+singleProject.title +'</h3>';
-        htmlString += '<h5>View Project</h5>';
+        htmlString += '<h5 class="view-button">View Project</h5>';
         htmlString +=  "</div></li>";
 
     }
@@ -97,7 +97,7 @@ renderPROJECTS();
 /***** click event for modal ****/
 $(function() {
     //Click event for class changes for Modal to show and hid
-    $('#lightSlider li h5').on('click', function () {
+    $('.view-button').on('click', function () {
         console.log('view project has been clicked');
     });
     $('#lightSlider li h5, .closebtn').on('click', function () {
