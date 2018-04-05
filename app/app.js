@@ -95,6 +95,11 @@ function renderPROJECTS(data) {
 renderPROJECTS();
 
 /***** click event for modal ****/
+$(document).ready(function () {
+    $('.view-button').on('click', function () {
+        console.log('view project has been clicked');
+    });
+});
 $(function() {
     //Click event for class changes for Modal to show and hid
     $('.view-button').on('click', function () {
