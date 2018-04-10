@@ -73,9 +73,11 @@ ajaxhttp.onreadystatechange = function () {
                 }
             ]
         });
-        $('.view-button').on('click', function () {
-            console.log('view project has been clicked');
-        });
+        // $('.view-button').on('click', function () {
+        //     console.log('view project has been clicked');
+        // });
+        modalApperance ();
+        modalDeatais(projects);
 
     }
 };
@@ -99,59 +101,52 @@ function renderPROJECTS(data) {
     $('#lightSlider').append( htmlString);
 
 }
-renderPROJECTS();
 
 /***** click event for modal ****/
-$(function() {
+function modalApperance () {
     //Click event for class changes for Modal to show and hid
     $('#lightSlider li h5, .closebtn').on('click', function () {
-        console.log('view project has been presed');
         //check which element is being clicked on
-        if($(this).attr('class') !== 'closebtn'){
+        if ($(this).attr('class') !== 'closebtn') {
             //have modal display, have clases active and deactive added when needed
-            $('#modal').removeAttr( "style");
-            if(!$('#modal').hasClass('active') && !$('#modal').hasClass('deactivate')) {
+            $('#modal').removeAttr("style");
+            if (!$('#modal').hasClass('active') && !$('#modal').hasClass('deactivate')) {
                 $('#modal').addClass('active');
 
-            }else{
+            } else {
                 $('#modal').toggleClass("active deactivate");
             }
             //when modal is activate have page scroll locked
             $('html').css("overflow", "hidden");
-        }else if($(this).attr('class') === 'closebtn'){
+        } else if ($(this).attr('class') === 'closebtn') {
             $('#modal').toggleClass("active deactivate");
 
             $('html').removeAttr('style');
         }
 
     });
+}
+function modalDeatais (data) {
     //Click event is for all content and info that need to be shown for each project
     $('#lightSlider li').on('click', function () {
         var projectId = $(this).attr('project-data');
-        var projectData = JSON.parse(ajaxhttp.responseText);
+        var singleData = data[projectId - 1];
+        var skills = singleData.skills;
+        var imageObj = singleData.images;
+        var newHTML = [];
+        //Add in list of skills to modal
+        $.each(skills, function(index, value) {
+            newHTML.push('<li>' + value + '</li>');
+        });
+        $(".modal-list").html(newHTML.join(""));
 
-        var singleData = projectData[projectId - 1];
+        //add in project descriptions
+        $('.project-description').html(singleData.description);
+        var projectImg = 'images'.concat(imageObj['group']);
+        $(".project-img").css("background-image",'url(' + projectImg + ')' );
 
-        if(ajaxhttp.readyState === 4 && ajaxhttp.status === 200)
-        {
-            var skills = singleData.skills;
-            var imageObj = singleData.images;
-            var newHTML = [];
-            //Add in list of skills to modal
-            $.each(skills, function(index, value) {
-                newHTML.push('<li>' + value + '</li>');
-            });
-            $(".modal-list").html(newHTML.join(""));
-
-            //add in project descriptions
-            $('.project-description').html(singleData.description);
-            var projectImg = 'images'.concat(imageObj['group']);
-            $(".project-img").css("background-image",'url(' + projectImg + ')' );
-
-
-        }
     });
-});
+}
 
 /****** For particel background *******/
 $(function () {
@@ -257,7 +252,7 @@ $(function() {
         lastScrollTop = st;
     });
 
-
+    //Profile hover image change
     $(".profile-image").mouseover(function () {
         console.log('you have mouse over');
         $(this).attr('src', $(this).data("hover"));
