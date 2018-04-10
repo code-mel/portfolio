@@ -1,6 +1,9 @@
 /****** height set (incase) ****/
 var clientHeight = $(window).height();
+var footerHeight = $('footer').outerHeight(true);
+
 $('#top').css('height', clientHeight);
+$('body').css('margin-bottom', footerHeight);
 
 /****** Preloader *******/
 $(window).on("load", function() {
@@ -25,10 +28,11 @@ $("#menu-toggle, .main-nav ul li").click(function(){
 $('.main-nav ul li a').click(function(e) {
     e.preventDefault();
     var anchorName = this.hash;
+    console.log($(anchorName).offset().top);
     $('html, body').animate({
         scrollTop: $(anchorName).offset().top + 77
     }, 500);
-    console.log('its clicked');
+    //console.log('its clicked');
 });
 
 
@@ -98,16 +102,8 @@ function renderPROJECTS(data) {
 renderPROJECTS();
 
 /***** click event for modal ****/
-$(document).ready(function () {
-    $('.view-button').on('click', function () {
-        console.log('view project has been clicked');
-    });
-});
 $(function() {
     //Click event for class changes for Modal to show and hid
-    $('.view-button').on('click', function () {
-        console.log('view project has been clicked');
-    });
     $('#lightSlider li h5, .closebtn').on('click', function () {
         console.log('view project has been presed');
         //check which element is being clicked on
@@ -149,8 +145,8 @@ $(function() {
 
             //add in project descriptions
             $('.project-description').html(singleData.description);
-
-            $("#modal img").attr("src", 'images'.concat(imageObj['group']) );
+            var projectImg = 'images'.concat(imageObj['group']);
+            $(".project-img").css("background-image",'url(' + projectImg + ')' );
 
 
         }

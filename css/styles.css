@@ -46,8 +46,7 @@ table {
 
 body {
   color: #555;
-  font-size: 120%;
-  margin-bottom: 17.4em; }
+  font-size: 120%; }
 
 /************************
 ** REUSABLE COMPONENTS **
@@ -176,8 +175,10 @@ p {
   overflow: scroll; }
   .modal h3 {
     margin-bottom: 1em; }
-  .modal img {
-    width: 100%; }
+  .modal .project-img {
+    height: 500px;
+    background-size: contain;
+    background-position: center; }
   .modal .col {
     float: left; }
   .modal .modal-button .closebtn, .modal .modal-button .linkbtn {
@@ -382,16 +383,16 @@ nav {
 ************************/
 .profile {
   padding: 8em 0 0 0;
-  background-color: #fff;
-  position: relative; }
+  background-color: #fff; }
+  .profile .row {
+    position: relative; }
   .profile .col.right-side {
     position: absolute;
     width: 45%;
     overflow: hidden;
-    height: 100%;
     right: 0; }
     .profile .col.right-side img {
-      width: 90%; }
+      width: auto; }
   .profile .col.left-side {
     float: left; }
     .profile .col.left-side .moto-mel {
@@ -579,11 +580,17 @@ footer {
   .hero-text {
     left: 5%; }
 
+  .profile .col.right-side img {
+    width: 100%; }
+
   .profile .profile-social, .profile .hire-social {
     width: 50%; }
 
   .work .project-titles {
-    margin-left: 2em; } }
+    margin-left: 2em; }
+
+  .modal .project-img {
+    background-size: cover; } }
 @media screen and (max-width: 768px) {
   body {
     margin-bottom: 21.4em; }
@@ -601,6 +608,8 @@ footer {
     position: initial; }
     .profile .col.right-side img {
       width: 80%; }
+  .profile .col.left-side h6 {
+    margin-bottom: .25em; }
   .profile .profile-social, .profile .hire-social {
     width: 100%;
     height: 8em; }
@@ -632,14 +641,33 @@ footer {
   nav .logo img {
     width: 80px; }
 
+  h6 {
+    font-size: 3em; }
+
   header {
     height: 88vh !important; }
     header .hero-main-heading {
       letter-spacing: 1px;
       font-size: 1.7em; }
+    header .nav-wrap .main-nav li a {
+      font-size: 2em; }
+
+  .profile .profile-social, .profile .hire-social {
+    width: 100%;
+    height: 5em; }
+
+  .profile .social-wrapper .profile-social li a {
+    width: 2.5em;
+    height: 2.5em; }
+  .profile .social-wrapper .hire-social a {
+    font-size: 1.5em;
+    line-height: 3.5em; }
 
   footer h6 {
-    font-size: 4em; } }
+    font-size: 4em; }
+
+  .modal .project-img {
+    height: 250px; } }
 /****************************
 ** KEYFRAMES FOR ANIMATION **
 *****************************/

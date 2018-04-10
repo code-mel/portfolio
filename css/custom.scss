@@ -80,8 +80,10 @@
   h3 {
     margin-bottom: 1em;
   }
-  img{
-    width: 100%;
+  .project-img{
+    height: 500px;
+    background-size: contain;
+    background-position: center;
   }
   .col{
     float: left;
@@ -367,18 +369,17 @@ nav {
 .profile {
   padding: 8em 0 0 0;
   background-color: #fff;
-  position: relative;
-  //.col{
-  //  position:absolute;
-  //}
+  .row{
+    position: relative;
+  }
   .col.right-side {
     position: absolute;
     width: 45%;
     overflow: hidden;
-    height: 100%;
+    //height: 100%;
     right: 0;
     img {
-      width: 90%;
+      width: auto;
     }
   }
 
@@ -634,6 +635,13 @@ footer {
   }
 
   //profile block
+  .profile{
+    .col.right-side {
+      img {
+        width: 100%;
+      }
+    }
+  }
   .profile .profile-social, .profile .hire-social {
     width: 50%;
   }
@@ -645,8 +653,14 @@ footer {
     }
 
   }
+//  modal
+  .modal {
+    .project-img {
+      background-size: cover;
+    }
+  }
 }
-//  Mobile
+//  Tablet/Mobile
 @media screen and (max-width: 768px) {
 
   body{
@@ -671,6 +685,11 @@ footer {
         position: initial;
         img{
           width: 80%;
+        }
+      }
+      &.left-side{
+        h6{
+          margin-bottom: .25em;
         }
       }
     }
@@ -728,21 +747,63 @@ footer {
 
 
 }
-
+// Mobile
 @media screen and (max-width: 480px) {
   nav .logo img {
     width: 80px;
   }
+  h6{
+    font-size: 3em;
+  }
+  //header
   header {
     height: 88vh !important;
     .hero-main-heading {
       letter-spacing: 1px;
       font-size: 1.7em;
     }
+    .nav-wrap{
+      .main-nav{
+        li{
+          a{
+            font-size: 2em;
+          }
+        }
+      }
+    }
   }
+  //profile
+  .profile .profile-social, .profile .hire-social{
+    width: 100%;
+    height: 5em;
+  }
+  .profile {
+    .social-wrapper{
+      .profile-social{
+        li{
+          a{
+            width: 2.5em;
+            height: 2.5em;
+          }
+        }
+      }
+      .hire-social a {
+        font-size: 1.5em;
+        line-height: 3.5em;
+      }
+    }
+  }
+  //work
+  //footer
   footer {
     h6 {
       font-size: 4em;
+    }
+  }
+  //modal
+  .modal {
+    .project-img {
+      height: 250px;
     }
   }
 
