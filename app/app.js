@@ -28,7 +28,7 @@ $("#menu-toggle, .main-nav ul li").click(function(){
 $('.main-nav ul li a').click(function(e) {
     e.preventDefault();
     var anchorName = this.hash;
-    console.log($(anchorName).offset().top);
+    //console.log($(anchorName).offset().top);
     $('html, body').animate({
         scrollTop: $(anchorName).offset().top + 77
     }, 500);
@@ -212,6 +212,7 @@ $(function() {
     var lastScrollTop = 0;
     var inHeaderDiv = false;
     var passedHeaderDivOnce = false;
+    var runOnceImageChangeProfile = false;
 
     $(window).scroll(function(){
         var st = $(this).scrollTop();
@@ -231,7 +232,7 @@ $(function() {
         } else {
             // if scrolling up then
             if (between && !inHeaderDiv && passedHeaderDivOnce) {
-                console.log("You've scrolled up and are in  header");
+                //console.log("You've scrolled up and are in  header");
                 $('nav').toggleClass('sticky fade-out');
 
                 $('nav').animate({
@@ -245,16 +246,41 @@ $(function() {
                     }, 500);
                 });
                 inHeaderDiv = true;
-                console.log(inHeaderDiv);
+                //console.log(inHeaderDiv);
             }
 
         }
         lastScrollTop = st;
+
+        //Profile image change for mobile
+        function mobileImageChange() {
+            $('.profile-image').attr('src', $('.profile-image').data("hover"));
+            setTimeout(function(){
+                $('.profile-image').attr('src', $('.profile-image').data("src"));
+                //console.log($('.profile-image').data("src"));
+            },3000);
+        }
+        var windowSize = $(window).width();
+        var profileDiv = ($(window).scrollTop() >= $('#profile').offset().top);
+
+        //image changes first time on scroll
+        if(windowSize <= 480 && profileDiv && !runOnceImageChangeProfile) {
+            //console.log('its mobile and image change');
+            mobileImageChange();
+            runOnceImageChangeProfile = true;
+        }
+        //image change when if user clicked image on mobile
+        if(windowSize <= 480) {
+            $('.profile-image').click(function() {
+                mobileImageChange();
+            });
+        }
+
     });
 
     //Profile hover image change
     $(".profile-image").mouseover(function () {
-        console.log('you have mouse over');
+        //console.log('you have mouse over');
         $(this).attr('src', $(this).data("hover"));
     }).mouseout(function () {
         $(this).attr('src', $(this).data("src"));
