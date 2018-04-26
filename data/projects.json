@@ -1,25 +1,27 @@
 [
   {
   "id": 1,
-  "title": "Project one",
-  "description": "This is a example of what I will be talking about my project blah bha jdflsjdf kdjf sjf ldj lajf ldjs ",
-  "thumbnail" : "/project-1-thumbnail.jpg",
-    "skills" : ["html", "css3", "Jquery", "wordpress", "php"],
+  "title": "Cog1",
+  "description": "Cog1 is an agency that's been up since 2001, and needed a rebrand to keep pace with the ever changing digital industry. With a team effort of the design and development team we were able to build a fresh new website.",
+  "thumbnail" : "/cog1_thumbnail.jpg",
+    "skills" : ["RESPONSIVE", "HTML", "CSS3", "JQUERY", "WORDPRESS", "PHP"],
+    "link" : "http://cog1.com/",
     "images":{
-      "group": "/holder-responsive.png",
-      "desktop": null,
+      "group": "/COG1-Hero_1500.jpg",
+      "desktop": "/COG1-960-2_1500.jpg",
       "table": null,
-      "mobile":null
+      "mobile": "/COG1-320_1500.jpg"
     }
   },
   {
     "id": 2,
-    "title": "Project Two",
-    "description": "This is a example of what I will be talking about my project this is two djflsjd. djfjs  jdfljs kjd fjdj jkf jsdlfj",
-    "thumbnail" : "/project-1-thumbnail.jpg",
-    "skills" : ["html", "css3", "Jquery", "wordpress", "php"],
+    "title": "IREI",
+    "description": "With a group of three Web developers and a design team we help IREI construct a great user experience and easily manageable WordPress CMS.",
+    "thumbnail" : "/irei_thumb.jpg",
+    "skills" : ["RESPONSIVE", "HTML", "CSS3", "JQUERY", "PHP", "WORDPRESS", "ACF (Advance Custom Fields)", "WOOCOMMERCE"],
+    "link" : "https://irei.com/",
     "images":{
-      "group": "/holder-responsive.png",
+      "group": "/irei-tablet.png",
       "desktop": null,
       "table": null,
       "mobile":null
@@ -27,12 +29,13 @@
   },
   {
     "id": 3,
-    "title": "Project Three",
-    "description": "This is a example of what I will be talking about my project this is three fksjfldkj sjklsjklfj sjdkljfklsd",
-    "thumbnail" : "/project-1-thumbnail.jpg",
-    "skills" : ["html", "css3", "Jquery", "wordpress", "php"],
+    "title": "Reactor Core",
+    "description": "Reactor Core is a network of educational institutions specialized in coding, programming and development technologies. Working at COG1, we crafted the created another easy manageable WordPress CMS.",
+    "thumbnail" : "/hrc_thumb.jpg",
+    "skills" : ["RESPONSIVE", "HTML", "CSS3", "JQUERY", "PHP", "WORDPRESS", "ACF (Advance Custom Fields)"],
+    "link" : null,
     "images":{
-      "group": "/holder-responsive.png",
+      "group": "/rea-Hero-1500.jpg",
       "desktop": null,
       "table": null,
       "mobile":null
@@ -40,12 +43,13 @@
   },
   {
     "id": 4,
-    "title": "Project Four",
+    "title": "WPengine",
     "description": "This is a example of what I will be talking about my project this is four dskjfdlkjf sdjfljs jdlfj djfljjslj",
-    "thumbnail" : "/project-1-thumbnail.jpg",
+    "thumbnail" : "/wpe_thumb.jpg",
     "skills" : ["html", "css3", "Jquery", "wordpress", "php"],
+    "link" : null,
     "images":{
-      "group": "/holder-responsive.png",
+      "group": "/wpe-tablet-1500.png",
       "desktop": null,
       "table": null,
       "mobile":null

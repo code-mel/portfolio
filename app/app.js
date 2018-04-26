@@ -90,12 +90,12 @@ function renderPROJECTS(data) {
     for(var project in data){
         var singleProject = data[project];
         // console.log('<li style="background-image: url(\'images' + singleProject.thumbnail + '\')">');
-        htmlString += '<li style="background-image: url(\'images' + singleProject.thumbnail + '\')"project-data=\"'+ singleProject.id +'\">';
+        htmlString += '<li project-data=\"'+ singleProject.id +'\">';
+        htmlString += '<div class="project-img-overlay" style="background-image: linear-gradient(rgba(0, 0, 0, 0.39), rgba(19, 19, 19, 0.9)), url(\'images/project_img' + singleProject.thumbnail + '\')"></div>';
         htmlString += '<div class="project-titles">';
         htmlString += '<h3>'+singleProject.title +'</h3>';
         htmlString += '<h5 class="view-button">View Project</h5>';
         htmlString +=  "</div></li>";
-
     }
     //console.log(typeof htmlString)
     $('#lightSlider').append( htmlString);
@@ -142,8 +142,24 @@ function modalDeatais (data) {
 
         //add in project descriptions
         $('.project-description').html(singleData.description);
-        var projectImg = 'images'.concat(imageObj['group']);
+        var projectImg = 'images/project_img'.concat(imageObj['group']);
         $(".project-img").css("background-image",'url(' + projectImg + ')' );
+
+        //console.log(singleData.link);
+        var htmlLink = ' ';
+        if(singleData.link !== null){
+            console.log(singleData.link);
+            htmlLink += '<li class="link"><a href="'+ singleData.link + '"  target="_blank"> ';
+            htmlLink += '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" class="linkbtn">';
+            htmlLink += '<circle stroke-width="2" stroke-miterlimit="10" cx="26" cy="26" r="25"></circle>';
+            htmlLink += '<path stroke-width="2" stroke-miterlimit="10" d="M25.5,20.7l4-4c1.3-1.3,3.4-1.3,4.7,0l1,1 c1.3,1.3,1.3,3.4,0,4.7l-5.6,5.6c-1.3,1.3-3.4,1.3-4.7,0"></path>';
+            htmlLink += '<path stroke-width="2" stroke-miterlimit="10" d="M26.3,31.5l-3.7,3.7c-0.6,0.6-1.5,1-2.4,1 c-0.9,0-1.7-0.3-2.4-1l-1-1c-1.3-1.3-1.3-3.4,0-4.7l5.6-5.6c1.3-1.3,3.4-1.3,4.7,0l1,1"></path>';
+            htmlLink += '</svg>';
+            htmlLink += '</a></li>';
+            $('.modal-button ul').append(htmlLink);
+        }else{
+            $('.modal-button ul .link').remove();
+        }
 
     });
 }

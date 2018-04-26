@@ -81,9 +81,11 @@
     margin-bottom: 1em;
   }
   .project-img{
-    height: 500px;
+    height: 600px;
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #e7e7e7;
   }
   .col{
     float: left;
@@ -485,6 +487,12 @@ nav {
       position: relative;
       height: 100%;
       background-size: cover;
+      .project-img-overlay{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
     }
   }
   .lSSlideOuter .lSPager.lSpg {
@@ -513,6 +521,7 @@ nav {
   .col {
     float: left;
     &.second{
+      padding-top: 10%;
       svg{
         width: 80%;
         float: right;
@@ -520,6 +529,12 @@ nav {
     }
     &:first-child{
 
+    }
+  }
+  .content-box {
+    .skills{
+      float: left;
+      width: 47%;
     }
   }
   /* ---- particles.js container ---- */

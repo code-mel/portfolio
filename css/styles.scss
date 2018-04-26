@@ -27,9 +27,9 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
-}
+//ol, ul {
+//    list-style: none;
+//}
 blockquote, q {
     quotes: none;
 }
@@ -112,11 +112,17 @@ h6 {
     font-family:'nexa_boldregular', 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
-p {
+p, ul {
     font-size: 1em;
     font-family:'Roboto', 'Helvetica', 'Arial', sans-serif;
     line-height: 150%;
     font-weight: 400;
+}
+ul {
+   padding-left: 3%;
+    ul{
+        padding-left: 10%;
+    }
 }
 
 
