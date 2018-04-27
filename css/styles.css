@@ -29,6 +29,9 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1; }
 
+ol, ul {
+  list-style: none; }
+
 blockquote, q {
   quotes: none; }
 
@@ -101,11 +104,6 @@ p, ul {
   line-height: 150%;
   font-weight: 400; }
 
-ul {
-  padding-left: 3%; }
-  ul ul {
-    padding-left: 10%; }
-
 /************************
 ******* PRELOADER *******
 ************************/
@@ -176,7 +174,8 @@ ul {
   top: 0;
   overflow: scroll; }
   .modal h3 {
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    font-size: 1.8em; }
   .modal .project-img {
     height: 600px;
     background-size: contain;
@@ -191,11 +190,11 @@ ul {
     transition: all .25s;
     width: 3em;
     height: 3em;
-    stroke: #FFF;
+    stroke: #6e8f82;
     fill: none;
     top: 1.5em; }
     .modal .modal-button .closebtn:hover, .modal .modal-button .linkbtn:hover {
-      fill: black;
+      fill: #FFFFFF;
       cursor: crosshair; }
   .modal .modal-button .linkbtn {
     top: 5.5em; }
@@ -327,7 +326,7 @@ nav {
     z-index: 30;
     transition: all .5s ease; }
     nav .logo img {
-      width: 120px; }
+      width: 100px; }
   nav .menu-button {
     position: absolute;
     top: 2.4em;
@@ -359,6 +358,8 @@ nav {
     nav .menu-button.menu-on .menu-button-bottom {
       transform: translateY(-0.8em) translateX(0) rotate(-45deg);
       background-color: #FFF; }
+    nav .menu-button.menu-on span {
+      border-bottom: none; }
     nav .menu-button.menu-off:hover .menu-button-top {
       top: 10px; }
     nav .menu-button.menu-off:hover .menu-button-bottom {
@@ -388,12 +389,13 @@ nav {
 .profile {
   padding: 8em 0 0 0;
   background-color: #fff; }
+  .profile h6 {
+    margin-bottom: .25em; }
   .profile .row {
     position: relative; }
   .profile .col.right-side {
     position: absolute;
     width: 45%;
-    overflow: hidden;
     right: 0; }
     .profile .col.right-side img {
       width: auto; }
@@ -495,6 +497,7 @@ nav {
   position: relative;
   height: 100%;
   color: #FFFFFF;
+  background: #FFFFFF;
   z-index: 1;
   /* ---- particles.js container ---- */ }
   .experience h6 {
@@ -508,6 +511,11 @@ nav {
       .experience .col.second svg {
         width: 80%;
         float: right; }
+  .experience .content-box ul {
+    padding-left: 3%;
+    list-style: initial; }
+    .experience .content-box ul ul {
+      padding-left: 10%; }
   .experience .content-box .skills {
     float: left;
     width: 47%; }
@@ -516,7 +524,7 @@ nav {
     width: 100%;
     height: 100%;
     bottom: 4em;
-    background-color: #6b8e82;
+    background: linear-gradient(to bottom right, rgba(8, 12, 19, 0.72), rgba(0, 102, 102, 0.88));
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 50%;
