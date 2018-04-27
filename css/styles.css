@@ -512,8 +512,9 @@ nav {
         width: 80%;
         float: right; }
   .experience .content-box ul {
-    padding-left: 3%;
-    list-style: initial; }
+    list-style: initial;
+    list-style-position: inside;
+    text-align: left; }
     .experience .content-box ul ul {
       padding-left: 10%; }
   .experience .content-box .skills {

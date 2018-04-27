@@ -540,8 +540,9 @@ nav {
   }
   .content-box {
     ul{
-      padding-left: 3%;
       list-style: initial;
+      list-style-position: inside;
+      text-align: left;
       ul {
         padding-left: 10%;
       }

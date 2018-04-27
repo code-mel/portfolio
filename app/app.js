@@ -141,7 +141,7 @@ function modalDeatais (data) {
         $(".modal-list").html(newHTML.join(""));
 
         //add in project descriptions
-        $('.project-description').html(singleData.description);
+        $('.project-description').html(singleData.description );
         var projectImg = 'images/project_img'.concat(imageObj['group']);
         $(".project-img").css("background-image",'url(' + projectImg + ')' );
 
@@ -157,8 +157,10 @@ function modalDeatais (data) {
             htmlLink += '</svg>';
             htmlLink += '</a></li>';
             $('.modal-button ul').append(htmlLink);
+            var link = '<a href="' + singleData.link + '"> See Project</a>';
+            $('.project-detail .link').html(link);
         }else{
-            $('.modal-button ul .link').remove();
+            $('.modal-button ul .link, .project-detail .link a' ).remove();
         }
 
     });
