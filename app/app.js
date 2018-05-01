@@ -158,7 +158,7 @@ function modalDeatais (data) {
             htmlLink += '</svg>';
             htmlLink += '</a></li>';
             $('.modal-button ul').append(htmlLink);
-            var link = '<a href="' + singleData.link + '"> See Project</a>';
+            var link = '<a href="' + singleData.link + '"> Link to Project</a>';
             $('.project-detail .link').html(link);
         }else{
             $('.modal-button ul .link, .project-detail .link a' ).remove();
