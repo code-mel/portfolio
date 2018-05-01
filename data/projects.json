@@ -43,10 +43,10 @@
   },
   {
     "id": 4,
-    "title": "WPengine",
-    "description": "This is a example of what I will be talking about my project this is four dskjfdlkjf sdjfljs jdlfj djfljjslj",
+    "title": "WPengine ",
+    "description": "As part of the COG1 development team we constructed WPengine to have great user experience and easily manageable WordPress CMS.",
     "thumbnail" : "/wpe_thumb.jpg",
-    "skills" : ["html", "css3", "Jquery", "wordpress", "php"],
+    "skills" : ["HTML", "CSS3", "JQUERY", "PHP", "WORDPRESS", "ACF (Advance Custom Fields)"],
     "link" : null,
     "images":{
       "group": "/wpe-tablet-1500.png",

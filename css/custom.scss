@@ -134,7 +134,18 @@
   }
 //  projet detail container
   .project-detail{
-
+    .link {
+      padding-top: 10px;
+      display: block;
+      a{
+        font-weight: 600;
+        color: #6e8f82;
+        text-decoration: none;
+        &:hover {
+          border-bottom: 5px solid;
+        }
+      }
+    }
   }
 }
 
@@ -414,7 +425,7 @@ nav {
     float: left;
     background-color: #6e8f82;
     height: 5em;
-    width: 40%;
+    width: 30%;
   }
   .social-wrapper {
     text-align: center;
@@ -432,8 +443,8 @@ nav {
         }
         a{
           display: block;
-          width: 1.7em;
-          height: 1.7em;
+          width: 2em;
+          height: 2em;
         }
         svg {
           fill: #FFFFFF;
@@ -631,7 +642,7 @@ footer {
       li {
         width: 2em;
         display: inline-block;
-        margin-right: 3%;
+        margin-right: 2%;
         svg {
           fill: #6e8f82;
         }

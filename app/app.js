@@ -25,7 +25,7 @@ $("#menu-toggle, .main-nav ul li").click(function(){
 });
 
 /***** Menu ancher scroll *****/
-$('.main-nav ul li a').click(function(e) {
+$('.main-nav ul li a, .hire-social a').click(function(e) {
     e.preventDefault();
     var anchorName = this.hash;
     //console.log($(anchorName).offset().top);
@@ -34,6 +34,7 @@ $('.main-nav ul li a').click(function(e) {
     }, 500);
     //console.log('its clicked');
 });
+
 
 
 /****** Slider data Ajax******/

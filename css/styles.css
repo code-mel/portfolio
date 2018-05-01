@@ -98,7 +98,7 @@ h6 {
   font-size: 5em;
   font-family: 'nexa_boldregular', 'Roboto', 'Helvetica', 'Arial', sans-serif; }
 
-p, ul {
+p, ul, a {
   font-size: 1em;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   line-height: 150%;
@@ -214,6 +214,15 @@ p, ul {
   .modal.deactivate {
     -webkit-animation: slide-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     animation: slide-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+  .modal .project-detail .link {
+    padding-top: 10px;
+    display: block; }
+    .modal .project-detail .link a {
+      font-weight: 600;
+      color: #6e8f82;
+      text-decoration: none; }
+      .modal .project-detail .link a:hover {
+        border-bottom: 5px solid; }
 
 /************************
 ******** HEADER*********
@@ -417,7 +426,7 @@ nav {
     float: left;
     background-color: #6e8f82;
     height: 5em;
-    width: 40%; }
+    width: 30%; }
   .profile .social-wrapper {
     text-align: center;
     margin: 2.5em 0;
@@ -432,8 +441,8 @@ nav {
         margin-right: 0px; }
       .profile .social-wrapper .profile-social li a {
         display: block;
-        width: 1.7em;
-        height: 1.7em; }
+        width: 2em;
+        height: 2em; }
       .profile .social-wrapper .profile-social li svg {
         fill: #FFFFFF;
         font-size: 24px; }
@@ -584,7 +593,7 @@ footer {
       footer .contact-info .social-icons li {
         width: 2em;
         display: inline-block;
-        margin-right: 3%; }
+        margin-right: 2%; }
         footer .contact-info .social-icons li svg {
           fill: #6e8f82; }
 
