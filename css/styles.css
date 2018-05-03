@@ -102,7 +102,8 @@ p, ul, a {
   font-size: 1em;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   line-height: 150%;
-  font-weight: 400; }
+  font-weight: 400;
+  text-decoration: none; }
 
 /************************
 ******* PRELOADER *******
@@ -595,6 +596,8 @@ footer {
         margin-right: 2%; }
         footer .contact-info .social-icons li svg {
           fill: #6e8f82; }
+    footer .contact-info a {
+      color: #555; }
 
 /************************
 ** RESPONSIVE QUERIES **
