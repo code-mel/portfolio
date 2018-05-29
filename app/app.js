@@ -1,3 +1,4 @@
+(function(){
 /****** height set (incase) ****/
 var clientHeight = $(window).height();
 var footerHeight = $('footer').outerHeight(true);
@@ -308,5 +309,4 @@ $(function() {
 });
 
 
-
-//if onload nav position is within the header container
+})();
